@@ -27,6 +27,12 @@ An Android application that helps you quickly update your installed development 
 4. **Install/Update**: Tap the button to download and install the latest version
 5. **Background Monitoring**: The app periodically checks for updates and notifies you
 
+## Keeping the build list up to date automatically
+
+If your CI uploads APKs to a Google Cloud Storage bucket, [`apk-indexer`](apk-indexer/)
+maintains `streams.json` for you: it parses each new APK's manifest and updates the file.
+It ships as a container image with a Terraform module for Cloud Run.
+
 ## API Format
 
 The app expects a JSON response from the configured URL in the following format:
