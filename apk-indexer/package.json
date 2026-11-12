@@ -1,0 +1,25 @@
+{
+  "name": "apk-indexer",
+  "version": "0.0.1",
+  "description": "Keeps streams.json in step with the APKs uploaded to the testing-artifacts bucket",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "gcp-build": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.5",
+    "@types/yauzl": "^2.10.3",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.15"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^5.0.5",
+    "@google-cloud/storage": "^8.4.0",
+    "typescript": "^6.0.3",
+    "yauzl": "^3.4.0"
+  }
+}
